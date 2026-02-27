@@ -1,0 +1,41 @@
+================================================================================
+  MODO DE MANUTENÇÃO - ESCOLINHA PALMEIRINHA
+================================================================================
+
+COMO USAR:
+----------
+
+1. ATIVAR MODO DE MANUTENÇÃO:
+   - Clique duas vezes em: ATIVAR_MANUTENCAO.bat
+   - O site original será salvo como "index.original.html"
+   - A página de manutenção será ativada automaticamente
+   - Os visitantes verão a mensagem: "Site Temporariamente Indisponível"
+
+2. DESATIVAR MODO DE MANUTENÇÃO:
+   - Clique duas vezes em: DESATIVAR_MANUTENCAO.bat
+   - O site original será restaurado
+   - Tudo voltará ao normal
+
+ARQUIVOS IMPORTANTES:
+---------------------
+- maintenance.html        = Página de manutenção (NÃO APAGAR)
+- index.html              = Página ativa do site
+- index.original.html     = Backup criado durante a manutenção
+- ATIVAR_MANUTENCAO.bat   = Script para ativar manutenção
+- DESATIVAR_MANUTENCAO.bat = Script para desativar manutenção
+
+OBSERVAÇÕES:
+------------
+- SEMPRE use os scripts .bat para ativar/desativar
+- NÃO renomeie os arquivos manualmente
+- NÃO apague o arquivo maintenance.html
+- Em caso de dúvida, entre em contato com o suporte técnico
+
+PERSONALIZAÇÃO:
+---------------
+Para alterar a mensagem de manutenção, edite o arquivo:
+maintenance.html
+
+================================================================================
+Criado por Pixel12Digital
+================================================================================
