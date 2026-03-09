@@ -3,192 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site em Manutenção - Escolinha Palmeirinha</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .maintenance-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .logo {
-            max-width: 200px;
-            margin-bottom: 30px;
-        }
-
-        .icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .icon svg {
-            width: 60px;
-            height: 60px;
-            fill: white;
-        }
-
-        h1 {
-            color: #2c3e50;
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            color: #7f8c8d;
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .message {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        .message p {
-            color: #34495e;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-
-        .message p:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-info {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #ecf0f1;
-        }
-
-        .contact-info h3 {
-            color: #2c3e50;
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .contact-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: white;
-        }
-
-        .footer-text {
-            margin-top: 30px;
-            color: #95a5a6;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            .maintenance-container {
-                padding: 40px 30px;
-            }
-
-            h1 {
-                font-size: 26px;
-            }
-
-            .subtitle {
-                font-size: 16px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
+    <title>Escolinha Palmeirinha</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="maintenance-container">
-        <div class="icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-10v6h2v-6h-2z"/>
-            </svg>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Escolinha Palmeirinha" class="logo">
+            </div>
+            <nav class="navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <h1>Site Temporariamente Indisponível</h1>
-        <p class="subtitle">Estamos realizando melhorias para oferecer uma experiência ainda melhor!</p>
-
-        <div class="message">
-            <p><strong>🔧 Manutenção em Andamento</strong></p>
-            <p>Nosso site está passando por atualizações importantes para melhor atendê-lo.</p>
-            <p>Em breve estaremos de volta com novidades!</p>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Nossa frase é:</p>
+                    <h1 class="hero-title">Acredite e Respeite o Processo.</h1>
+                    <p class="hero-description">Descubra uma escolinha de futebol com resultados surpreendentes, formando atletas desde os 4 anos e alcançando o sonho de representar o Brasil.</p>
+                    <a href="#historia" class="hero-button">Conheça Nossa Metodologia Única</a>
+                </div>
+            </div>
         </div>
+    </section>
+    
+    <!-- Segunda Seção - História -->
+    <section id="historia" class="history-section">
+        <div class="history-container">
+            <div class="history-content">
+                <div class="history-text">
+                    <h2 class="history-title">Das ladeiras da Vila Palmeira para o mundo.</h2>
+                    <p class="history-description">
+                        Treze anos de lutas, conquistas e muito aprendizado. Somos responsáveis diretos pela formação de homens e mulheres. <strong>PALMEIRINHA</strong> é um projeto em que <strong>Deus é a base</strong>. As mãos de Deus estão sobre este projeto, e somos todos gratos por Sua presença.
+                    </p>
+                </div>
+                <div class="history-image">
+                    <img src="assets/mascote.png" alt="Mascote Palmeirinha" class="mascote-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Terceira Seção - Bem-vindo e Programas -->
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <!-- Seção Superior -->
+            <div class="welcome-top">
+                <div class="welcome-text">
+                    <h2 class="welcome-title">Bem-vindo</h2>
+                    <h3 class="welcome-subtitle">Escolinha Palmeirinha</h3>
+                    <p class="welcome-description">
+                        Resultados surpreendentes, atualmente contamos com quase 30 atletas em clubes profissionais brasileiros e somos a única escolinha de futebol do Brasil com seis atletas atuando no Fluminense do Rio de Janeiro.
+                    </p>
+                </div>
+                <div class="welcome-image">
+                    <img src="assets/time.jpg" alt="Time Palmeirinha" class="team-img">
+                </div>
+            </div>
+            
+            <!-- Seção Inferior -->
+            <div class="programs-section">
+                <div class="player-spotlight">
+                    <img src="assets/lucas.jpg" alt="Lucas Machado" class="player-img">
+                </div>
+                <div class="programs-content">
+                    <h2 class="programs-title">Nossos Programas</h2>
+                    <div class="programs-text">
+                        <p class="programs-description">
+                            Com uma metodologia única e inovadora, <strong>alcançamos excelentes resultados no desenvolvimento de crianças a partir de 4 anos</strong>, construindo uma base sólida e bem fundamentada.
+                        </p>
+                        <p class="programs-description">
+                            Nosso enfoque contínuo no desenvolvimento holístico dos jovens atletas não apenas aprimora suas habilidades técnicas, mas <strong>também promove valores essenciais como disciplina, trabalho em equipe e resiliência</strong>.
+                        </p>
+                        <p class="programs-description">
+                            Nosso compromisso é oferecer um ambiente seguro e estimulante, onde cada criança possa prosperar não apenas como jogador, mas também como indivíduo. Integrando treinamento físico, técnico e mental desde cedo, preparamos nossos alunos para enfrentar os desafios do esporte e da vida com confiança e determinação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção de Parcerias -->
+    <section class="partnerships-section">
+        <div class="partnerships-container">
+            <h2 class="partnerships-title">Algumas Parcerias de Prestígio</h2>
+            <div class="clubs-logos">
+                <div class="club-logo">
+                    <img src="assets/flamengo.png" alt="Flamengo" class="logo-img">
+                </div>
+                <div class="club-logo">
+                    <img src="assets/fluminense.png" alt="Fluminense" class="logo-img">
+                </div>
+                <div class="club-logo">
+                    <img src="assets/fortaleza.png" alt="Fortaleza" class="logo-img">
+                </div>
+                <div class="club-logo">
+                    <img src="assets/ceara.png" alt="Ceará" class="logo-img">
+                </div>
+                <div class="club-logo">
+                    <img src="assets/palmeiras.png" alt="Palmeiras" class="logo-img">
+                </div>
+            </div>
+            <p class="partnerships-description">
+                Temos orgulho em termos construído parcerias com os principais clubes do Brasil, como Flamengo, Fluminense, São Paulo, Palmeiras, Bahia, Vitória, Fortaleza, Ceará, entre outros. Essas colaborações destacam nosso compromisso em proporcionar aos jovens atletas da Escolinha Palmeirinha oportunidades excepcionais de desenvolvimento e crescimento no mundo do futebol profissional.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Seção Estrelas em Ascensão -->
+    <section class="stars-section">
+        <div class="stars-container">
+            <div class="stars-header">
+                <h2 class="stars-title">Estrelas em Ascensão</h2>
+                <p class="stars-subtitle">Atletas Destaque da Escolinha Palmeirinha</p>
+            </div>
+            <div class="stars-collage">
+                <div class="stars-left">
+                    <img src="assets/estrela01.jpg" alt="Atletas Palmeirinha - Lado Esquerdo" class="stars-img">
+                </div>
+                <div class="stars-right">
+                    <img src="assets/estrela02.jpg" alt="Atletas Palmeirinha - Lado Direito" class="stars-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção de Parabéns -->
+    <section class="congratulations-section">
+        <div class="congratulations-container">
+            <div class="congratulations-header">
+                <h2 class="congratulations-title">Parabéns, Ruan Sales e Marcos Paulo!</h2>
+                <p class="congratulations-subtitle">Atletas revelados pela Escolinha Palmeirinha assinam contrato profissional com o Fluminense RJ.</p>
+            </div>
+            <div class="athletes-showcase">
+                <div class="athlete-card">
+                    <img src="assets/marcos.jpg" alt="Marcos Paulo" class="athlete-img">
+                    <h3 class="athlete-name">Marcos Paulo</h3>
+                </div>
+                <div class="athlete-card">
+                    <img src="assets/ruan.jpg" alt="Ruan Sales" class="athlete-img">
+                    <h3 class="athlete-name">Ruan Sales</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção da Frase -->
+    <section class="phrase-section">
+        <div class="phrase-container">
+            <h2 class="phrase-text">"Deus é a nossa base"</h2>
+        </div>
+    </section>
+    
+    <!-- Seção de Artigos do Blog -->
+    <section id="blog" class="blog-section">
+        <div class="blog-container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/blog01.png" alt="Treinamento de Futebol" class="blog-img">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">DICAS DE TREINAMENTO</span>
+                        <h3 class="blog-title">Como a Escolinha Palmeirinha Treina Futuros Craques no Futebol</h3>
+                        <a href="blog01.html" class="blog-link">Ler mais</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/blog02.jpg" alt="Desenvolvimento Pessoal" class="blog-img">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">DESENVOLVIMENTO PESSOAL E SOCIAL</span>
+                        <h3 class="blog-title">Por Que Investir em uma Escolinha de Futebol Pode Transformar o Futuro do Seu Filho</h3>
+                        <a href="blog02.html" class="blog-link">Ler mais</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/blog03.png" alt="Ruan Sales" class="blog-img">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">HISTÓRIAS DE SUCESSO</span>
+                        <h3 class="blog-title">Ruan Sales: Da Escolinha Palmeirinha à Seleção Brasileira</h3>
+                        <a href="blog03.html" class="blog-link">Ler mais</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/blog04.png" alt="Vitória Histórica" class="blog-img">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">EVENTOS E TORNEIOS</span>
+                        <h3 class="blog-title">Vitória Histórica do Sub-13: Palmeirinha 1 x 0 PSG</h3>
+                        <a href="blog04.html" class="blog-link">Ler mais</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Final - 13 Anos e Formulário -->
+    <section class="final-section">
+        <div class="final-container">
+            <div class="final-content">
+                <div class="final-left">
+                    <div class="final-text">
+                        <h2 class="final-title">13 anos de pura conquista e aprendizado!</h2>
+                        <p class="final-description">
+                            Com uma metodologia inovadora que atende crianças a partir dos 4 anos de idade, 
+                            a Escolinha Palmeirinha se destaca na revelação de talentos e formação de atletas profissionais.
+                        </p>
+                        <div class="achievements">
+                            <div class="achievement-item">
+                                <h3 class="achievement-number">30</h3>
+                                <p class="achievement-text">Atletas em clubes profissionais brasileiros</p>
+                            </div>
+                            <div class="achievement-item">
+                                <h3 class="achievement-number">6</h3>
+                                <p class="achievement-text">Atletas no Fluminense RJ</p>
+                            </div>
+                            <div class="achievement-item">
+                                <h3 class="achievement-number">13</h3>
+                                <p class="achievement-text">Anos de experiência</p>
+                            </div>
+                        </div>
+                        <div class="partnerships-info">
+                            <h4 class="partnerships-title">Parcerias de Prestígio</h4>
+                            <p class="partnerships-text">
+                                Flamengo, Fluminense, São Paulo, Palmeiras, Bahia, Vitória, Fortaleza e Ceará
+                            </p>
+                        </div>
+                    </div>
+                    <div class="final-image">
+                        <img src="assets/13anos.jpeg" alt="13 anos de conquistas" class="years-img">
+                    </div>
+                </div>
+                
+                <div class="final-right">
+                    <div class="contact-form">
+                        <h3 class="form-title">Entre em Contato</h3>
+                        <p class="form-subtitle">Fale conosco para mais informações sobre nossos programas e instalações.</p>
+                        
+                        <form id="contactForm" class="form">
+                            <div class="form-group">
+                                <label for="nome" class="form-label">Nome completo do aluno</label>
+                                <input type="text" id="nome" name="nome" class="form-input" placeholder="Digite seu nome completo aqui" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="idade" class="form-label">Idade*</label>
+                                <input type="text" id="idade" name="idade" class="form-input" placeholder="Digite a data de Nascimento" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Preferência Período*</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="periodo" value="manha" required>
+                                        <span class="radio-text">Manhã</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="periodo" value="tarde" required>
+                                        <span class="radio-text">Tarde</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="whatsapp" class="form-label">WhatsApp*</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" class="form-input" placeholder="Seu Whats ou Telefone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail de contato*</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Digite seu e-mail aqui" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensagem" class="form-label">Mensagem ou dúvidas*</label>
+                                <textarea id="mensagem" name="mensagem" class="form-textarea" placeholder="Digite sua mensagem aqui" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="form-button">Enviar formulário de inscrição</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Nossa Frase é:</h3>
+                <p class="footer-phrase">Acredite e Respeite o Processo</p>
+                <h4 class="footer-subtitle">Siga o Palmeirinha no Instagram</h4>
+                <a href="https://www.instagram.com/escolinha_palmeirinha/" target="_blank" class="instagram-link">
+                    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Institucional:</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Entre em Contato:</h3>
+                <p class="footer-contact">WhatsApp: <a href="tel:+5598988427847">(98) 98842-7847</a></p>
+                <p class="footer-contact">E-mail: <a href="mailto:contato@escolinhapalmeirinha.com.br">contato@escolinhapalmeirinha.com.br</a></p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Arena Pingão:</h3>
+                <p class="footer-address">Rua Manoel Coelho de <u>Alencar</u>, Planalto <u>Pingão</u>, São Luís - MA</p>
+                
+                <h3 class="footer-title">Arena Bosque</h3>
+                <p class="footer-address">Av. Santos <u>Dumont</u>, 679 - <u>Anil</u>, São Luís - MA</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024. Todos os Direitos Reservados. Criado por Pixel12Digital</p>
+        </div>
+        
+        <div class="whatsapp-float">
+            <a href="https://wa.me/5598988427847" target="_blank" class="whatsapp-btn">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const nome = formData.get('nome');
+            const idade = formData.get('idade');
+            const periodo = formData.get('periodo');
+            const whatsapp = formData.get('whatsapp');
+            const email = formData.get('email');
+            const mensagem = formData.get('mensagem');
+            
+            const periodoTexto = periodo === 'manha' ? 'Manhã' : 'Tarde';
+            
+            const textoWhatsApp = `Olá! Visitei o site da Escolinha Palmeirinha e gostaria de mais informações:
 
-        <p class="footer-text">Agradecemos a compreensão!<br><strong>Escolinha Palmeirinha</strong></p>
-    </div>
+*Dados do Aluno:*
+• Nome: ${nome}
+• Idade: ${idade}
+• Período Preferido: ${periodoTexto}
+• WhatsApp: ${whatsapp}
+• E-mail: ${email}
+
+*Mensagem:*
+${mensagem}
+
+Aguardo retorno!`;
+            
+            const urlWhatsApp = `https://api.whatsapp.com/send/?phone=98988427847&text=${encodeURIComponent(textoWhatsApp)}&type=phone_number&app_absent=0`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
 </body>
 </html>
